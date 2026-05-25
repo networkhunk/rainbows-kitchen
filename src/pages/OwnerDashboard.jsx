@@ -200,6 +200,29 @@ export default function OwnerDashboard() {
               </div>
               <p style={{fontSize: '0.9rem', marginBottom: '1rem'}}>{new Date(order.created_at).toLocaleTimeString()}</p>
               
+              {order.customer_name && (
+                <div style={{
+                  background: 'var(--primary-light)',
+                  border: '1px solid rgba(255, 65, 108, 0.2)',
+                  borderRadius: 'var(--radius-sm)',
+                  padding: '0.6rem 0.8rem',
+                  marginBottom: '1rem',
+                  fontSize: '0.9rem',
+                  fontWeight: 700,
+                  color: 'var(--primary)',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '0.4rem',
+                  lineHeight: 1.3
+                }}>
+                  <span style={{fontSize: '1rem'}}>📝</span>
+                  <div>
+                    <span style={{fontSize: '0.75rem', textTransform: 'uppercase', opacity: 0.8, display: 'block', marginBottom: '0.1rem', fontWeight: 800}}>Instructions:</span>
+                    {order.customer_name}
+                  </div>
+                </div>
+              )}
+              
               <ul style={{listStyle: 'none', padding: 0, margin: '0 0 1.5rem 0', fontSize: '0.95rem'}}>
                 {order.order_items?.map((item, i) => (
                   <li key={i} className="flex justify-between" style={{marginBottom: '0.5rem', borderBottom: '1px dashed var(--glass-border)', paddingBottom: '0.5rem'}}>

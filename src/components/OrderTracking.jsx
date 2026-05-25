@@ -63,6 +63,22 @@ export default function OrderTracking({ order, onNewOrder }) {
           </div>
           <h2 style={{fontSize: '1.8rem', letterSpacing: '-0.03em', margin: 0}}>Order Placed</h2>
           <p style={{fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-secondary)', margin: '0.25rem 0 0 0'}}>Table {currentOrder.table_number} • <span style={{color: 'var(--text-primary)'}}>₹{currentOrder.total_amount}</span></p>
+          
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            background: 'var(--primary-light)',
+            color: 'var(--primary)',
+            padding: '0.5rem 1rem',
+            borderRadius: 'var(--radius-full)',
+            marginTop: '1rem',
+            fontSize: '0.95rem',
+            fontWeight: 800,
+            border: '1px solid rgba(255, 65, 108, 0.15)'
+          }}>
+            ⏱️ Your order will take 15 mins
+          </div>
         </div>
 
         <div style={{position: 'relative', paddingLeft: '1rem', marginBottom: '3rem', zIndex: 1}}>
